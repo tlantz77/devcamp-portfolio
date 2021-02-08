@@ -1,3 +1,3 @@
 # Devcamp Portfolio Application
 
-TODO: Fill out Readme!
+TODO: Please fill out Readme!
