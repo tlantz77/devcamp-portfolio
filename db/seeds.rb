@@ -1,7 +1,16 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
+
+puts "3 topics created"
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
-    body: "Beavis rules!"
+    body: "Beavis rules!",
+    topic_id: Topic.last.id
   )
 end
 
@@ -16,13 +25,23 @@ end
 
 puts "5 skills created"
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title #{portfolio_item}",
-    subtitle: "Sweet-ass service",
-    body: "Lipsum ipsum Beavis",
-    main_image: "https://via.placeholder.com/300",
-    thumb_image: "https://via.placeholder.com/150"
+    subtitle: "Ruby on rails",
+    body: "Lipsum ipsum Beavis Ruby",
+    main_image: "https://via.placeholder.com/300x200",
+    thumb_image: "https://via.placeholder.com/150x100"
+  )
+end
+
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title #{portfolio_item}",
+    subtitle: "React",
+    body: "Lipsum ipsum Beavis React",
+    main_image: "https://via.placeholder.com/300x200",
+    thumb_image: "https://via.placeholder.com/150x100"
   )
 end
 
